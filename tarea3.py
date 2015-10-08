@@ -88,3 +88,5 @@ plt.ylabel('$dy/ds(s)$')
 plt.title('y vs dy/ds para $\mu^* = 1.312$, $y(0)=4$, $dy/ds(0)=0$')
 plt.show()
 plt.savefig('ydy2.eps')
+
+#P2
