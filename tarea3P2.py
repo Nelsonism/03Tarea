@@ -34,9 +34,6 @@ while N<10000:
     x.append(r.y[0])
     y.append(r.y[1])
     z.append(r.y[2])
-x=np.asarray(x) 
-y=np.asarray(y)
-z=np.asarray(z)
 
 xp=x[0]
 yp=y[0]
