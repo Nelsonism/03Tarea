@@ -15,6 +15,7 @@ def AtractorDeLorenz(t,xyz):
 o=10
 b=8/3
 p=28
+
 x=[float(input('X inicial?'))]
 y=[float(input('Y inicial?'))]
 z=[float(input('Z inicial?'))]
@@ -50,5 +51,5 @@ ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.set_zlabel('z')
 plt.title('$Atractor$ $de$ $Lorentz$ $con$ $(X_0, Y_0, Z_0)=$'+'$('+str(xp)+',$'+' $'+str(yp)+',$'+' $'+str(zp)+')$')
-plt.show()
 fig.savefig('Atractor('+str(xp)+', '+str(yp)+', '+str(zp)+').png')
+plt.show()
