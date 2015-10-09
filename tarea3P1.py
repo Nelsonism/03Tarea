@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #P1
-
+#Definicion de funciones
 def VanDerPool(y, dy):
     return dy, -y-u*((y**2)-1)*dy
 
@@ -28,17 +28,17 @@ def RK3(Xn, Yn, f):
     Xn1=Xn+(1/6)*(K1[0]+4*K2[0]+K3[0])
     Yn1=Yn+(1/6)*(K1[1]+4*K2[1]+K3[1])
     return Xn1, Yn1
-
-
+#Condiciones iniciales
 u=1.312
 Pasos=30000
-h=20*np.pi/Pasos
+h=20*np.pi/Pasos #Discretizacion 
 T=np.linspace(0, 20*np.pi, Pasos)
 
 #1)
 y=[0.1]
 dy=[0]
-N=1
+N=1 #Variable auxiliar para contar las iteraciones
+#Integracion
 while N<Pasos:
     Yn1, dYn1 = RK3(y[N-1], dy[N-1], VanDerPool)
     N+=1
@@ -47,6 +47,7 @@ while N<Pasos:
 y=np.asarray(y)
 dy=np.asarray(dy)
 
+#Plot
 fig=plt.figure()
 fig.add_subplot(211)
 plt.plot(T,y)
@@ -61,6 +62,7 @@ plt.show()
 fig.savefig('ydy1.png')
 
 #2)
+#Se repite lo mismo pero con diferente condicion inicial.
 y=[4]
 dy=[0]
 N=1
